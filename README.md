@@ -29,6 +29,9 @@ npm install -S git@git.teonite.net:teonite/angular2-auth.git
 ## Add custom options to boot.js
 
 ```javascript
+/**
+ * src/boot.js
+ */
 'use strict';
 import 'es6-shim';
 import 'reflect-metadata';
@@ -89,7 +92,10 @@ bootstrap(AuthComponent, [
 To protect your app you will need an outer auth component which will use a custom protected router outlet. 
 The protected router outlet will allow a user to view a certain route only if there is a token in local storage or the route was configured as public.
 
-```
+```javascript
+/**
+ * src/app/auth.js
+ */
 import {Component} from "@angular/core";
 import {RouteConfig} from "@angular/router-deprecated";
 import {AppComponent} from "./app";
@@ -116,6 +122,7 @@ In the example above all routes under AppComponent will be protected and the Log
 To make this work the auth component template needs to use a custom router-outlet directive.
 
 ```html
+<!--src/app/auth.html-->
 <protected-router-outlet></protected-router-outlet>
 ```
 
@@ -124,6 +131,9 @@ To make this work the auth component template needs to use a custom router-outle
 Finally you can add the main app component with routes configuration.
 
 ```javascript
+/**
+ * src/app/app.js
+ */
 import {Component} from '@angular/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import appTemplate from './app.html';
@@ -152,6 +162,7 @@ LogoutComponent will remove the token from local storage and redirect the user t
 The template of the main app component uses the standard router outlet.
 
 ```html
+<!--src/app/app.html-->
 <router-outlet></router-outlet>
 ```
 
