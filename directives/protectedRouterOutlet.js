@@ -11,9 +11,9 @@ var _get = function get(object, property, receiver) { if (object === null) objec
 
 var _dec, _class;
 
-var _core = require('angular2/core');
+var _core = require('@angular/core');
 
-var _router = require('angular2/router');
+var _routerDeprecated = require('@angular/router-deprecated');
 
 var _tokenStorage = require('../services/tokenStorage');
 
@@ -40,7 +40,7 @@ var ProtectedRouterOutlet = exports.ProtectedRouterOutlet = (_dec = (0, _core.Di
     _this.tokenAuthOptions = tokenAuthOptions;
 
     _this.publicRoutes = tokenAuthOptions.publicRoutes;
-    _this.loginUrl = tokenAuthOptions.loginUrl;
+    _this.loginRouteName = tokenAuthOptions.loginRouteName;
     return _this;
   }
 
@@ -62,12 +62,11 @@ var ProtectedRouterOutlet = exports.ProtectedRouterOutlet = (_dec = (0, _core.Di
       var url = nextInstruction.urlPath;
 
       if (this.publicRoutes.indexOf(url) < 0 && !this.tokenStorageService.getToken()) {
-        // this.parentRouter.navigate(['Login']);
-        window.location.href = this.loginUrl;
+        this.parentRouter.navigate([this.loginRouteName]);
       }
     }
   }]);
 
   return ProtectedRouterOutlet;
-}(_router.RouterOutlet)) || _class);
-Reflect.defineMetadata('design:paramtypes', [_core.ViewContainerRef, _core.DynamicComponentLoader, _router.Router, String, _tokenStorage.TokenStorageService, _tokenAuthOptions.TokenAuthOptions], ProtectedRouterOutlet);
+}(_routerDeprecated.RouterOutlet)) || _class);
+Reflect.defineMetadata('design:paramtypes', [_core.ViewContainerRef, _core.DynamicComponentLoader, _routerDeprecated.Router, String, _tokenStorage.TokenStorageService, _tokenAuthOptions.TokenAuthOptions], ProtectedRouterOutlet);

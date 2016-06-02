@@ -1,8 +1,8 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import appTemplate from './app.html';
 import {ProtectedComponent} from './components/protected';
-import {LogoutApp} from 'angular2-auth/components/logout';
+import {LogoutComponent} from 'angular2-auth/components/logout';
 
 
 @Component({
@@ -12,7 +12,7 @@ import {LogoutApp} from 'angular2-auth/components/logout';
 })
 @RouteConfig([
   {path: '/', component: ProtectedComponent, name: 'Protected'},
-  {path: '/logout', component: LogoutApp, name: 'Logout'}
+  {path: '/logout', component: LogoutComponent, name: 'Logout'}
 ])
 export class AppComponent {
   constructor() {

@@ -9,9 +9,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _class;
 
-var _core = require('angular2/core');
+var _core = require('@angular/core');
 
-var _http = require('angular2/http');
+var _http = require('@angular/http');
 
 var _tokenStorage = require('./tokenStorage');
 

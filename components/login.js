@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.LoginApp = undefined;
+exports.LoginComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _dec, _class;
 
-var _core = require("angular2/core");
+var _core = require("@angular/core");
 
-var _router = require("angular2/router");
+var _routerDeprecated = require("@angular/router-deprecated");
 
 var _login = require("./login.html");
 
@@ -19,7 +19,7 @@ var _login2 = _interopRequireDefault(_login);
 
 var _tokenAuth = require("../services/tokenAuth");
 
-var _http = require("angular2/http");
+var _http = require("@angular/http");
 
 var _tokenStorage = require("../services/tokenStorage");
 
@@ -27,15 +27,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var LoginApp = exports.LoginApp = (_dec = (0, _core.Component)({
+var LoginComponent = exports.LoginComponent = (_dec = (0, _core.Component)({
   selector: 'login',
   template: _login2.default,
   changeDetection: _core.ChangeDetectionStrategy.Default,
   encapsulation: _core.ViewEncapsulation.None
 
 }), _dec(_class = function () {
-  function LoginApp(tokenAuthService, router, tokenStorageService) {
-    _classCallCheck(this, LoginApp);
+  function LoginComponent(tokenAuthService, router, tokenStorageService) {
+    _classCallCheck(this, LoginComponent);
 
     this.username = this.username;
     this.password = this.password;
@@ -45,7 +45,7 @@ var LoginApp = exports.LoginApp = (_dec = (0, _core.Component)({
     this.tokenStorageService = tokenStorageService;
   }
 
-  _createClass(LoginApp, [{
+  _createClass(LoginComponent, [{
     key: "submit",
     value: function submit() {
       var _this = this;
@@ -63,6 +63,6 @@ var LoginApp = exports.LoginApp = (_dec = (0, _core.Component)({
     }
   }]);
 
-  return LoginApp;
+  return LoginComponent;
 }()) || _class);
-Reflect.defineMetadata("design:paramtypes", [_tokenAuth.TokenAuthService, _router.Router, _tokenStorage.TokenStorageService], LoginApp);
+Reflect.defineMetadata("design:paramtypes", [_tokenAuth.TokenAuthService, _routerDeprecated.Router, _tokenStorage.TokenStorageService], LoginComponent);
