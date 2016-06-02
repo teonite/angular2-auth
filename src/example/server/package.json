@@ -1,0 +1,15 @@
+{
+  "name": "angular2-auth-example-server",
+  "version": "1.0.0",
+  "description": "Simple server for token retrival",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Kamil Chudy <kchudy@teonite.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.13.4"
+  }
+}

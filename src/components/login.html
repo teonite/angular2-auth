@@ -1,0 +1,31 @@
+<div class="main-wrapper">
+    <div class="container">
+        <form class="form-signin">
+            <h2>
+                <span class="bracket red"></span>
+                <span class="bracket red right"></span>Example Page
+            </h2>
+            <label for="inputUser" class="">Login:</label>
+            <div class="relative">
+                <input type="text" [(ngModel)]="username" id="inputUser" class="form-control" placeholder="User name" required autofocus
+                       (keydown.enter)="submit()">
+                <span class="bracket"></span>
+                <span class="bracket right"></span>
+            </div>
+            <label for="inputPassword" class="">Password:</label>
+            <div class="relative">
+                <input type="password" [(ngModel)]="password" id="inputPassword" class="form-control" placeholder="Password" required
+                        (keydown.enter)="submit()">
+                <span class="bracket"></span>
+                <span class="bracket right"></span>
+            </div>
+            <div class="has-error" *ngIf="errorMessage"><span class="help-block">{{ errorMessage }}</span>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block" type="button" (click)="submit()">
+                Log in
+                <i class="fa fa-angle-right"></i>
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{
+  "name": "angular2-auth-example-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/boot.js",
+  "dependencies": {
+    "angular2": "2.0.0-beta.16",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.6.12",
+    "angular2-auth": "../../"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-angular2-annotations": "5.0.0",
+    "babel-plugin-transform-class-properties": "6.5.2",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-flow-strip-types": "6.5.0",
+    "babel-preset-es2015": "6.5.0",
+    "copy-webpack-plugin": "^1.1.1",
+    "html-loader": "^0.4.0",
+    "imports-loader": "^0.6.5",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Kamil Chudy <kchudy@teonite.com>",
+  "license": "ISC"
+}
