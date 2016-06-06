@@ -22,7 +22,7 @@ angular2-auth is based on Token Authentication used in Django REST Framework wit
 
 ```shell
 # from the terminal at the root of your project
-npm install -S git@git.teonite.net:teonite/angular2-auth.git
+npm install -S https://github.com/teonite/angular2-auth.git
 ```
 
 # Basic Usage
